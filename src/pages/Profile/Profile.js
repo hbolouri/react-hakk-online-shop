@@ -1,4 +1,5 @@
 import React, { useContext } from "react";
+import "./Profile.css";
 //for singout
 import { getAuth, signOut } from "firebase/auth";
 import { useNavigate } from "react-router-dom";
@@ -11,7 +12,7 @@ const Profile = () => {
   const logOutGoogle = () => {
     signOut(auth).then(() => {
       setUser(null);
-      //   navigate("/", { replace: true }); replace olmadan da calisiyor
+      //   navigate("/", { replace: true }); replace olmadan da calisiyor.
       navigate("/");
     });
   };
