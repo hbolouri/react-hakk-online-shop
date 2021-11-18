@@ -6,6 +6,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 
 import React from 'react';
 import Navbar from './components/Navbar/Navbar';
+import Payment from './components/Payment/Payment';
 
 
 function App() {
@@ -15,6 +16,9 @@ function App() {
       <Contact />
 
       <Navbar/>
+
+
+
 
     </div>
   );
