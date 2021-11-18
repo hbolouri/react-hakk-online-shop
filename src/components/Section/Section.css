@@ -1,0 +1,26 @@
+.Section {
+    padding: 5px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    height: 250px;
+  }
+  
+  .Cards {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .Sub-header {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+  }
+  .Sub-header li {
+    padding-left: 3rem;
+ }
+  
+ .slick-arrow::before {
+  background-color: black;
+  }
+
+
