@@ -20,23 +20,23 @@ export default function section({title, data}) {
                 <li>Accessories</li>
                 <li>Sale %</li>
             </ul>
-            <div style={{border:"2px solid black"}}>
+            <div style={{}}>
                 <h1>Trending Now</h1>
                 <p>Stay up to date</p>
             </div>
-            <div style={{border:"2px solid black"}}>
+            <div style={{}}>
                 <h4>{title} </h4>
                 <Slider slidesToShow={3} slidesToscroll={3} dots={true}>
-                {data?.map((item)=> 
-                    
-                        (
-                        <Card key={item.id} product={item}   />
-                        )
-
-                        )}
+                {data.map((item)=> (
+                    <Card key={item.id} product={item}   />
+                    ))}
                 </Slider>
                     </div>
-                </section>
+        </section>
             )
         }
+                    
+                        
+                        
+
                     
