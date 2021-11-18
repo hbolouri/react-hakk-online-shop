@@ -1,8 +1,11 @@
-// import React from "react";
-// import { MyContext } from "./context";
+ import React,{useState} from "react";
+ import { MyContext } from "./context";
 
-// const Container = (props) => {
-//   return <MyContext.Provider value={{}}>{props.children}</MyContext.Provider>;
-// };
+const Container = (props) => {
+    const [user,setUser] = useState(null)
 
-// export default Container;
+
+  return <MyContext.Provider value={{user,setUser}}>{props.children}</MyContext.Provider>;
+ };
+
+ export default Container;
