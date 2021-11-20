@@ -10,16 +10,19 @@ import ShoppingBag from "./pages/ShoppingBag/ShoppingBag";
 import Login from "./pages/Login/Login";
 import "./App.css";
 import Profile from "./pages/Profile/Profile";
+import SingleProduct from "./pages/SingleProduct/SingleProduct";
 
 function App() {
   return (
     <div className="App">
       <Navbar />
       <Routes>
-        <Route path="/" element={<Home />} />
+        <Route path={"/" || "/home"} element={<Home />} />
+
         <Route path="/men" element={<Men />} />
         <Route path="/women" element={<Women />} />
         <Route path="/kids" element={<Kids />} />
+        <Route path="/singleProduct/:id" element={<SingleProduct />} />
         <Route path="/shoppingBag" element={<ShoppingBag />} />
         <Route path="/login" element={<Login />} />
         <Route path="/profile" element={<Profile />} />

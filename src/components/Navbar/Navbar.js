@@ -25,7 +25,7 @@ export default function Navbar() {
         </Link>
         <ul className="List-left">
           <li>
-            <Link to="/">Home</Link>
+            <Link to={"/"}>Home</Link>
           </li>
           <li>
             <Link to="/women">Women</Link>
