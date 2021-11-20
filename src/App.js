@@ -7,8 +7,9 @@ import Women from "./pages/Women/Women";
 import Kids from "./pages/Kids/Kids";
 import NotFound from "./pages/NotFound/NotFound";
 import ShoppingBag from "./pages/ShoppingBag/ShoppingBag";
-
+import Login from "./pages/Login/Login";
 import "./App.css";
+import Profile from "./pages/Profile/Profile";
 
 function App() {
   return (
@@ -20,6 +21,8 @@ function App() {
         <Route path="/women" element={<Women />} />
         <Route path="/kids" element={<Kids />} />
         <Route path="/shoppingBag" element={<ShoppingBag />} />
+        <Route path="/login" element={<Login />} />
+        <Route path="/profile" element={<Profile />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
     </div>
