@@ -73,7 +73,7 @@ export default function Navbar() {
           </Modal>
         </div>
         <div>
-          <Link to="/shopping-bag">
+          <Link to="/shoppingBag">
             <FiShoppingCart /> Shopping bag(1)
           </Link>
         </div>
