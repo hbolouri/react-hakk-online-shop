@@ -1,3 +1,4 @@
+
 import React from "react";
 import "./Payment.css";
 import Paypal from "./Paypal";
@@ -42,4 +43,5 @@ export default function Payment() {
       </div>
     </div>
   );
-}
+
+
