@@ -13,7 +13,7 @@ import { MyContext } from "../../Context/context";
 
 export default function Navbar() {
   const [show, setShow] = useState(false);
-  const { user } = useContext(MyContext);
+  const { user, quantity, setQuantity } = useContext(MyContext);
 
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
@@ -74,7 +74,7 @@ export default function Navbar() {
         </div>
         <div>
           <Link to="/shoppingBag">
-            <FiShoppingCart /> Shopping bag(1)
+            <FiShoppingCart /> Shopping bag {quantity}
           </Link>
         </div>
       </div>
