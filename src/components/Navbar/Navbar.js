@@ -14,7 +14,7 @@ import { MyContext } from "../../Context/context";
 export default function Navbar() {
   const [show, setShow] = useState(false);
   const { user, quantity, setQuantity } = useContext(MyContext);
-
+  console.log(quantity);
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
   return (
@@ -60,6 +60,7 @@ export default function Navbar() {
           <Button variant="light" onClick={handleShow}>
             <GrContact /> Contact
           </Button>
+
           <Modal size="lg" show={show} onHide={handleClose}>
             <Modal.Header closeButton></Modal.Header>
             <Modal.Body>

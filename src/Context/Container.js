@@ -9,8 +9,8 @@ const Container = (props) => {
 
   useEffect(() => {
     setProducts(data);
-  }, [data]);
-  // console.log(products);
+  }, []);
+  console.log(products);
   return (
     <MyContext.Provider
       value={{

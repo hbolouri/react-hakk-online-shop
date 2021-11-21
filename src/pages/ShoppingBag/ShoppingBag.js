@@ -24,7 +24,7 @@ const ShoppingBag = () => {
                 <div>
                   <h3 className="item-title">{item.title}</h3>
                   <p className="item-quantity">
-                    Piece: <span className="pieces">{item.quantity}</span>
+                    Piece: <span className="pieces">{item.number}</span>
                   </p>
                 </div>
               </Link>

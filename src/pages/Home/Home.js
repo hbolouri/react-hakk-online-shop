@@ -28,15 +28,16 @@ const Home = () => {
       {products.map((product) => {
         return (
           <>
-            <Link to={`/singleProduct/${product.id}`}>
-              <div>
+            <div>
+              <Link to={`/singleProduct/${product.id}`}>
                 <h2>{product.title}</h2>
-                <div>
-                  <img src={product.image} alt="" width="200" />
-                </div>
+              </Link>
+              <div>
+                <img src={product.image} alt="" width="200" />
               </div>
-            </Link>
-            <button onClick={addToBag(product)}>Add To Bag</button>
+            </div>
+
+            <button onClick={() => addToBag(product)}>Add To Bag</button>
           </>
         );
       })}
