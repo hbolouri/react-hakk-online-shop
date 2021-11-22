@@ -1,14 +1,12 @@
-import React from 'react';
-import './Home.css'
-import '../../Carousel/Carousel'
-import Carousel from '../../Carousel/Carousel';
 import React, { useContext } from "react";
+import "./Home.css";
+import "../../Carousel/Carousel";
+import Carousel from "../../Carousel/Carousel";
 
 import { Link } from "react-router-dom";
 import { MyContext } from "../../Context/context";
 
 const Home = () => {
-  
   const { products, bag, setBag } = useContext(MyContext);
   let { quantity, setQuantity } = useContext(MyContext);
 
@@ -29,12 +27,11 @@ const Home = () => {
   console.log(bag);
 
   return (
-    
-    <div>
+    <div className="container">
       <section>
-            <Carousel/>
-       </section>
-    
+        <Carousel />
+      </section>
+
       {products.map((product) => {
         return (
           <>

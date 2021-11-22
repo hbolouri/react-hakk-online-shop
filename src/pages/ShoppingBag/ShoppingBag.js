@@ -1,11 +1,74 @@
-import React, { useContext } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import { MyContext } from "../../Context/context";
 import { GiShoppingBag } from "react-icons/gi";
 import { Link } from "react-router-dom";
+import "./ShoppingBag.css";
+import Button from "react-bootstrap/Button";
+import { Modal } from "react-bootstrap";
+import Paypal from "../../components/Payment/Paypal";
 
 const ShoppingBag = () => {
-  const { products, setProducts, bag, setBag } = useContext(MyContext);
+  const { bag, setBag, totalPrice, setTotalPrice } = useContext(MyContext);
+  let { quantity, setQuantity } = useContext(MyContext);
+  const [sumOfQuantity, setSumOfQuantity] = useState(0);
 
+  const [show, setShow] = useState(false);
+  const handleClose = () => setShow(false);
+  const handleShow = () => setShow(true);
+
+  useEffect(() => {
+    const total = bag.reduce((acc, curr) => {
+      acc += curr.price * curr.number;
+      return acc;
+    }, 0);
+
+    setTotalPrice(total);
+    console.log(totalPrice);
+  }, [bag]);
+
+  console.log(totalPrice);
+
+  //to remove only one item
+  const removeOne = (item) => {
+    let removeItem = bag.find((product) => product.id === item.id);
+    if (removeItem.number === 1) {
+      quantity--;
+      setQuantity(quantity);
+      let updatedBag = bag.filter((product) => product.id !== item.id);
+      setBag(updatedBag);
+    } else {
+      quantity--;
+      setQuantity(quantity);
+      removeItem.number--;
+      setBag([...bag]);
+    }
+  };
+  //to remove all items
+  const removeAll = (item) => {
+    let removedItems = bag.find((product) => product.id === item.id);
+    let updatedBag = bag.filter((product) => product.id !== item.id);
+    setBag(updatedBag);
+    quantity -= removedItems.number;
+    setQuantity(quantity);
+  };
+  //to calculate number of total quantity inside the bag
+  useEffect(() => {
+    const sumOfTheQuntity = bag.reduce((acc, item) => {
+      acc += item.number;
+      return acc;
+    }, 0);
+    console.log(sumOfTheQuntity);
+    setSumOfQuantity(sumOfTheQuntity);
+    console.log(sumOfQuantity);
+  }, [bag]);
+  //clear Shopping Bag
+  const clearShoppingBag = () => {
+    quantity -= sumOfQuantity;
+    console.log(quantity);
+    setQuantity(quantity);
+    setBag([]);
+  };
+  console.log(bag);
   return (
     <div className="cart">
       <h1 className="cart-header">
@@ -32,27 +95,29 @@ const ShoppingBag = () => {
                 <h1>${item.price}</h1>
               </div>
               <div className="buttons">
-                {/* <button onClick={() => removeOne(item)} className="btn">
+                <button onClick={() => removeOne(item)} className="btn">
                   Remove One
                 </button>
                 <button onClick={() => removeAll(item)} className="btn">
                   Remove All
-                </button> */}
+                </button>
               </div>
             </div>
           );
         })}
-        {/* <div>
+        <div>
+          <button onClick={clearShoppingBag} className="btn">
+            Clear Shopping Bag
+          </button>
           <Button variant="secondary" onClick={handleShow}>
             Pay
           </Button>
-
           <Modal show={show} onHide={handleClose}>
             <Modal.Header closeButton>
               <Modal.Title>Pay</Modal.Title>
             </Modal.Header>
             <Modal.Body>
-              <PaypalComponent />
+              <Paypal />
             </Modal.Body>
             <Modal.Footer>
               <Button variant="secondary" onClick={handleClose}>
@@ -60,10 +125,9 @@ const ShoppingBag = () => {
               </Button>
             </Modal.Footer>
           </Modal>
-        </div> */}
+        </div>
       </div>
     </div>
   );
 };
-
 export default ShoppingBag;

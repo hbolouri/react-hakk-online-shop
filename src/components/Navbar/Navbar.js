@@ -48,7 +48,7 @@ export default function Navbar() {
           {user ? (
             <Link to="/profile">
               <BsFillPersonCheckFill />
-              Profile
+              Welcome {user.displayName}
             </Link>
           ) : (
             <Link to="/login">
@@ -75,7 +75,7 @@ export default function Navbar() {
         </div>
         <div>
           <Link to="/shoppingBag">
-            <FiShoppingCart /> Shopping bag {quantity}
+            <FiShoppingCart /> Shopping bag ({quantity})
           </Link>
         </div>
       </div>

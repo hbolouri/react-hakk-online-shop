@@ -1,0 +1,15 @@
+.buttons {
+    display: flex;
+}
+
+.btn {
+    background-color: black;
+    color: whitesmoke;
+    padding: 10px;
+    border-radius: 30px;
+    border: none;
+}
+
+.btn:hover {
+    transform: scale(1.1);
+}
