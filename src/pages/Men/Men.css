@@ -1,19 +1,9 @@
-.Container {
-    padding: 5px 0;
-    min-height: 80vh;
-    width: 90vw;
-    margin: auto;
-    margin-top: 5px;
-    margin-bottom: 5px;
-  }
-
+ 
   .images-parent {
     display: flex;
-  }
-
-  .images-parent  {
     height: 600px;
   }
+
 
   .image-left {
     background-image: url("https://cdn.wallpapersafari.com/9/91/6CIV28.jpg");
@@ -27,15 +17,14 @@
     display: flex;
     justify-content: flex-end;
     align-items: flex-end;
-    z-index: 2;
+    z-index: 3;
 
   }
+  
 
   .image-text{
-    margin-right: -200px;
+    margin-right: -210px;
   }
-
-  
 
   .image-right {
     background-image: url("https://wallpaperaccess.com/full/1448061.jpg");
@@ -47,6 +36,16 @@
     width: 50%;
     height: 600px;
   }
+
+.btn-image {
+    position:relative;
+    left:6rem;
+    margin: 1rem;
+    padding: 1rem;
+  }
+
+  
+
 
 
  

@@ -1,10 +1,13 @@
 .Section {
+  padding: 5px;
+  margin-top: 10px;
+  margin-bottom: 60px;
+  
+}
 
-    padding: 5px;
-    margin-top: 10px;
-    margin-bottom: 10px;
-    height: 80vh;
-  }
+  .container {
+    max-width: 80vw;
+  } 
   
   .Cards {
     display: flex;

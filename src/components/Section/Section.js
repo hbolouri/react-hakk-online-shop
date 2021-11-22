@@ -7,7 +7,7 @@ import Slider from 'react-slick'
 
 
 export default function section({title, data}) {
-    console.log(data);
+    console.log("form section::",data);
     return (
         <section className='Section'>
             <ul className='Sub-header'>
@@ -24,14 +24,14 @@ export default function section({title, data}) {
                 <h1>Trending Now</h1>
                 <p>Stay up to date</p>
             </div>
-            <div style={{}}>
+            <div className="container">
                 <h4>{title} </h4>
                 <Slider slidesToShow={3} slidesToscroll={3} dots={true}>
                 {data.map((item)=> (
                     <Card key={item.id} product={item}   />
                     ))}
                 </Slider>
-                    </div>
+            </div>
         </section>
             )
         }

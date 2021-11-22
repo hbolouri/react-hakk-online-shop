@@ -7,7 +7,7 @@ export default function Card({product}) {
     console.log(product);
     return (
         <div className="Card" style={{backgroundImage:`url(${product.image})`}} >
-        {product.title}
+       <h6>{product.title}</h6> 
         </div>
         )
 }
