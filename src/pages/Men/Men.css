@@ -1,0 +1,51 @@
+ 
+  .images-parent {
+    display: flex;
+    height: 600px;
+  }
+
+
+  .image-left {
+    background-image: url("https://cdn.wallpapersafari.com/9/91/6CIV28.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    /* opacity:.9; */
+    border: 1px solid black;
+    width: 50%;
+    height: 600px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    z-index: 3;
+
+  }
+  
+
+  .image-text{
+    margin-right: -210px;
+  }
+
+  .image-right {
+    background-image: url("https://wallpaperaccess.com/full/1448061.jpg");
+    background-repeat: no-repeat;
+    background-size:cover;
+    background-position: center;
+    opacity: .9;
+    border: 1px solid black;
+    width: 50%;
+    height: 600px;
+  }
+
+.btn-image {
+    position:relative;
+    left:6rem;
+    margin: 1rem;
+    padding: 1rem;
+  }
+
+  
+
+
+
+ 
