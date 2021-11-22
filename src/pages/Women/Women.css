@@ -1,0 +1,49 @@
+.images-parent-w {
+    display: flex;
+    height: 600px;
+  }
+
+
+  .image-left-w{
+    background-image: url("https://img.freepik.com/free-photo/girl-purple-blouse-black-pants-is-sitting-chair-looking-into-camera-holding-folder-against-background-hangers-with-bright-dresses_197531-17617.jpg?size=626&ext=jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    /* opacity:.9; */
+    border: 1px solid black;
+    width: 50%;
+    height: 600px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    z-index: 3;
+
+  }
+  
+
+  .image-text-w{
+    margin-right: -210px;
+  }
+
+  .image-right-w {
+    background-image: url("https://www.zastavki.com/pictures/originals/2017Girls___Beautyful_Girls_A_girl_sits_on_a_white_cube__photo_on_a_red_background_114698_.jpg");
+    background-repeat: no-repeat;
+    background-size:cover;
+    background-position: center;
+    opacity: .9;
+    border: 1px solid black;
+    width: 50%;
+    height: 600px;
+  }
+
+.btn-image {
+    position:relative;
+    left:6rem;
+    margin: 1rem;
+    padding: 1rem;
+  }
+
+
+  .women-all {
+    margin-top: 5rem;
+  }

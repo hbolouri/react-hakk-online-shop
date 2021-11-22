@@ -46,8 +46,8 @@ const Home = () => {
                 <img src={product.image} alt="" width="200" />
               </div>
             </div>
-
-            <button onClick={() => addToBag(product)}>Add To Bag</button>
+              {/* for krishna */}
+            <button onClick={() => addToBag(product)}>Add To Bag</button> 
           </>
         );
       })}
