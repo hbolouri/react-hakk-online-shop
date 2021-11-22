@@ -1,3 +1,4 @@
+
 import Navbar from "./components/Navbar/Navbar";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { Routes, Route } from "react-router";
@@ -11,11 +12,19 @@ import Login from "./pages/Login/Login";
 import "./App.css";
 import Profile from "./pages/Profile/Profile";
 import SingleProduct from "./pages/SingleProduct/SingleProduct";
+import React from 'react';
+import Contact from "./components/Contact/Contact";
+import Footer from './components/Footer/Footer';
 
 function App() {
   return (
     <div className="App">
+
+    
+
+
       <Navbar />
+
       <Routes>
         <Route path={"/" || "/home"} element={<Home />} />
 
@@ -28,6 +37,10 @@ function App() {
         <Route path="/profile" element={<Profile />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
+
+    
+      <Footer/>
+
     </div>
   );
 }
