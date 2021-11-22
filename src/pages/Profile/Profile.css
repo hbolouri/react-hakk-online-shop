@@ -10,7 +10,7 @@ button {
 }
 
 .profile-header {
-    color: snow;
+    color: black;
     display: grid;
     place-items: center;
     background-color: var(--primaryColor);
@@ -21,7 +21,7 @@ button {
 }
 
 .profile-info {
-    color: snow;
+    color: black;
     display: grid;
     place-items: center;
     padding: 20px;

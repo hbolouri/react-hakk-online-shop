@@ -1,11 +1,23 @@
-import React, { useContext, useEffect } from "react";
-import "./Login.css";
+import React, { useContext } from "react";
+//FROM FIREBASE
+// Import the functions you need from the SDKs you need
+//it cover all history method
 import { useNavigate } from "react-router-dom";
+//import order is important
 import { initializeApp } from "firebase/app";
-import { getAuth, GoogleAuthProvider, signInWithPopup } from "firebase/auth";
+import {
+  getAuth,
+  GoogleAuthProvider,
+  signInWithPopup,
+  //it stay on the same page
+  //onAuthStateChanged,
+} from "firebase/auth";
 
+// TODO: Add SDKs for Firebase products that you want to use
+// https://firebase.google.com/docs/web/setup#available-libraries
 import GoogleButton from "react-google-button";
-import { MyContext } from "../App";
+import { MyContext } from "../../Context/context";
+
 const firebaseConfig = {
   apiKey: process.env.REACT_APP_API_KEY,
   authDomain: process.env.REACT_APP_AUTH_DOMAIN,
@@ -14,22 +26,27 @@ const firebaseConfig = {
   messagingSenderId: process.env.REACT_APP_MESSAGING_SENDING_ID,
   appId: process.env.REACT_APP_APP_ID,
 };
-
 const app = initializeApp(firebaseConfig);
 
 const auth = getAuth();
 const googleProvider = new GoogleAuthProvider();
 
+//for google button
+
+// Your web app's Firebase configuration
+
+// Initialize Firebase
+
 const Login = () => {
   const { setUser } = useContext(MyContext);
-  //to change the url parameter
+  //to change the url paramater
   const navigate = useNavigate();
   const loginWithGoogle = () => {
     //which services we want to show
     signInWithPopup(auth, googleProvider)
       .then((userInfo) => {
         setUser(userInfo.user);
-        //login page disappeared and we want to change parameter
+        //login page disappered and we want to change paramather
         //{replace:true} change the previous path
         navigate("/profile");
         //navigate(-2)go two step back

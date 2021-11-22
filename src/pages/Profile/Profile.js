@@ -3,7 +3,7 @@ import "./Profile.css";
 //for singout
 import { getAuth, signOut } from "firebase/auth";
 import { useNavigate } from "react-router-dom";
-import { MyContext } from "../Context/context";
+import { MyContext } from "../../Context/context";
 
 const auth = getAuth();
 const Profile = () => {
