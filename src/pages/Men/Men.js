@@ -1,3 +1,4 @@
+
 import React from "react";
 import "./Men.css";
 import { menClothes, womenClothes, kidsClothes } from "../../api/products";
@@ -25,3 +26,5 @@ export default function Men() {
     </main>
   );
 }
+
+

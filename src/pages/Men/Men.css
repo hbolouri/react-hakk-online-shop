@@ -1,11 +1,11 @@
  
-  .images-parent {
+  .images-parent-m {
     display: flex;
     height: 600px;
   }
 
 
-  .image-left {
+  .image-left-m{
     background-image: url("https://cdn.wallpapersafari.com/9/91/6CIV28.jpg");
     background-repeat: no-repeat;
     background-size: cover;
@@ -22,11 +22,11 @@
   }
   
 
-  .image-text{
+  .image-text-m{
     margin-right: -210px;
   }
 
-  .image-right {
+  .image-right-m {
     background-image: url("https://wallpaperaccess.com/full/1448061.jpg");
     background-repeat: no-repeat;
     background-size:cover;
@@ -37,13 +37,17 @@
     height: 600px;
   }
 
-.btn-image {
+.btn-image-m{
     position:relative;
     left:6rem;
     margin: 1rem;
     padding: 1rem;
   }
 
+
+  .men-all {
+    margin-top: 5rem;
+  }
   
 
 

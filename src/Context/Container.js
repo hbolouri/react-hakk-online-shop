@@ -4,7 +4,7 @@ import data from "../api/products";
 const Container = (props) => {
   const [user, setUser] = useState(null);
   const [products, setProducts] = useState([]);
-  const [bag, setBag] = useState([]);
+  const [bag, setBag] = useState([]); //use for krishna
   const [quantity, setQuantity] = useState(0);
   const [totalPrice, setTotalPrice] = useState(0);
 
