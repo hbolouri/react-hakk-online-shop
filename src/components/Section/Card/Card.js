@@ -9,4 +9,5 @@ export default function Card({ product }) {
       <Link to={`/singleProduct/${product.id}`}>{product.title}</Link>
     </div>
   );
+
 }

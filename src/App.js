@@ -19,15 +19,9 @@ import Footer from './components/Footer/Footer';
 function App() {
   return (
     <div className="App">
-
-    
-
-
-      <Navbar />
-
-      <Routes>
+    <Navbar />
+    <Routes>
         <Route path={"/" || "/home"} element={<Home />} />
-
         <Route path="/men" element={<Men />} />
         <Route path="/women" element={<Women />} />
         <Route path="/kids" element={<Kids />} />
@@ -40,7 +34,6 @@ function App() {
 
     
       <Footer/>
-
     </div>
   );
 }
