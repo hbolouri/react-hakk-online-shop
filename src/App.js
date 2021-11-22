@@ -1,10 +1,14 @@
 
 import React from 'react';
+import Home from "../src/pages/Home/Home"
+import Signup from "../src/components/Signup/Signup"
+
 
 function App() {
   return (
     <div className="App">
-      <h1>My React App</h1>
+      <Home/>
+      <Signup/>
     </div>
   );
 }
