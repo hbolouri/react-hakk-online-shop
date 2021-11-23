@@ -1,6 +1,6 @@
 import React, { useContext, useState, useRef } from "react";
 import "./Navbar.css";
-import { Link } from "react-router-dom";
+import { NavLink, Link } from "react-router-dom";
 import { FiSearch } from "react-icons/fi";
 import { BiLogIn } from "react-icons/bi";
 import { GrContact } from "react-icons/gr";
@@ -14,7 +14,7 @@ import { MyContext } from "../../Context/context";
 export default function Navbar() {
   const inputRef = useRef();
   const [show, setShow] = useState(false);
-  const { user, quantity, products, setProducts } = useContext(MyContext);
+  const { user, quantity, products, setProducts, data } = useContext(MyContext);
 
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
@@ -33,7 +33,7 @@ export default function Navbar() {
     e.preventDefault();
     // console.log(inputRef.current.searchItem.value);
 
-    let updatedProducts = products.filter(
+    let updatedProducts = data.filter(
       (product) =>
         product.category
           .toLowerCase()
@@ -53,90 +53,134 @@ export default function Navbar() {
     <nav className="Navbar">
       <div className="NavList-left">
         <Link to="/">
-          <div className="Logo">Logo</div>
+          <div className="Logo">
+            <img width="100" src="./images/Logo.png" alt="" />
+          </div>
         </Link>
         <ul className="List-left">
           <li>
-            <Link to={"/"}>Home</Link>
+            <NavLink
+              className={(node) =>
+                node.isActive ? "myActiveClass" : "myNotActiveClass"
+              }
+              to={"/"}
+            >
+              Home
+            </NavLink>
           </li>
           <li>
-            <Link to="/women">Women</Link>
+            <NavLink
+              className={(node) =>
+                node.isActive ? "myActiveClass" : "myNotActiveClass"
+              }
+              to="/women"
+            >
+              Women
+            </NavLink>
           </li>
           <li>
-            <Link to="/men">Men</Link>
+            <NavLink
+              className={(node) =>
+                node.isActive ? "myActiveClass" : "myNotActiveClass"
+              }
+              to="/men"
+            >
+              Men
+            </NavLink>
           </li>
           <li>
-            <Link to="/kids">Kids</Link>
+            <NavLink
+              className={(node) =>
+                node.isActive ? "myActiveClass" : "myNotActiveClass"
+              }
+              to="/kids"
+            >
+              Kids
+            </NavLink>
           </li>
         </ul>
       </div>
 
       <div className="NavList-right">
+        <div id="shopNow" className="search-bar">
+          <div className="icon">
+            <form onSubmit={searchValue} ref={inputRef}>
+              <div>
+                <div className="BarSearch">
+                  <FiSearch size="25px" />
+                  <input
+                    // onChange={searchProduct}
+                    onFocus={() => setProducts(data)}
+                    className="search"
+                    type="text"
+                    name="searchItem"
+                    //name is important for useREf
+                    placeholder="Search products"
+                  />
+                </div>
+                <button>
+                  <span className="btn-search" type="submit" name="search">
+                    Search
+                  </span>
+                </button>
+              </div>
+            </form>
+          </div>
 
-        <div id="shopNow" className="icon">
-          
-
-        <div className="icon">
-          <FiSearch />
-          <form onSubmit={searchValue} ref={inputRef}>
-            <input
-              // onChange={searchProduct}
-              className="search"
-              type="text"
-              name="searchItem"
-              //name is important for useREf
-              placeholder="Search products"
-            />
-            <button style={{ marginTop: "0" }} type="submit" name="search">
-              Search
-            </button>
-            <button
-              style={{ marginTop: "0" }}
-              onClick={() => window.location.reload(true)}
+          <div>
+            {user ? (
+              <Link to="/profile">
+                <BsFillPersonCheckFill />
+                Welcome {user.displayName}
+              </Link>
+            ) : (
+              <NavLink
+                className={(node) =>
+                  node.isActive ? "myActiveClass" : "myNotActiveClass"
+                }
+                to="/login"
+              >
+                <BiLogIn /> Login
+              </NavLink>
+            )}
+          </div>
+          <div>
+            <NavLink
+              className={(node) =>
+                node.isActive ? "myActiveClass" : "myNotActiveClass"
+              }
+              to="/contact"
             >
-              Refresh
-            </button>
-          </form>
-        </div>
+              <button className="btn-contact" onClick={handleShow}>
+                <GrContact /> Contact
+              </button>
+            </NavLink>
 
-        <div>
-          {user ? (
-            <Link to="/profile">
-              <BsFillPersonCheckFill />
-              Welcome {user.displayName}
-            </Link>
-          ) : (
-            <Link to="/login">
-              <BiLogIn /> Login
-            </Link>
-          )}
-        </div>
-        <div>
-          <Button variant="light" onClick={handleShow}>
-            <GrContact /> Contact
-          </Button>
-
-          <Modal size="lg" show={show} onHide={handleClose}>
-            <Modal.Header closeButton></Modal.Header>
-            <Modal.Body>
-              <Contact />
-            </Modal.Body>
-            <Modal.Footer>
-              <Button variant="secondary" onClick={handleClose}>
-                Close
-              </Button>
-            </Modal.Footer>
-          </Modal>
-        </div>
-        <div>
-          <Link to="/shoppingBag">
-            <FiShoppingCart /> Shopping bag ({quantity})
-          </Link>
+            <Modal size="lg" show={show} onHide={handleClose}>
+              <Modal.Header closeButton></Modal.Header>
+              <Modal.Body>
+                <Contact />
+              </Modal.Body>
+              <Modal.Footer>
+                <Button variant="secondary" onClick={handleClose}>
+                  Close
+                </Button>
+              </Modal.Footer>
+            </Modal>
+          </div>
+          <div>
+            <NavLink
+              className={(node) =>
+                node.isActive ? "myActiveClass" : "myNotActiveClass"
+              }
+              to="/shoppingBag"
+            >
+              <FiShoppingCart /> Shopping bag{" "}
+              <span className="quantity">{quantity}</span>
+            </NavLink>
+          </div>
         </div>
       </div>
-      </div>
-
     </nav>
-
   );
 }
