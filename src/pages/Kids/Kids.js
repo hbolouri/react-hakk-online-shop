@@ -1,7 +1,7 @@
 
 import React from 'react'
 import './Kids.css'
-import { menClothes, womenClothes, kidsClothes } from '../../api/products'
+import { kidsClothes } from '../../api/products'
 import Products from '../../components/Section/Products'
 import Section from '../../components/Section/Section'
 import { Anchor } from 'antd'
@@ -20,7 +20,7 @@ export default function Kids() {
                     <div className="image-left-k">
                     <div className="image-text-k">
                         <h1 style={{color:"white"}}>A Chill Season ~~~</h1>
-                        <h5 style={{color:"white"}}>Effortless design to wear anywhere</h5>
+                        <h4 style={{color:"white"}}>Effortless design to wear anywhere</h4>
                         <Anchor affix={false}>
                             <Link href="#shopNow" title={<button className="btn-image">SHOP NOW</button>} />
                         </Anchor>

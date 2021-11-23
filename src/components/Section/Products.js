@@ -34,26 +34,30 @@ return (
     <div style={{display:"flex", alignItems:"center", justifyContent:"center", flexWrap:"wrap"}}>
         <h4>{title}</h4>
 
-    <div style={{ display: "flex", flexWrap: "wrap" }} > 
+    <div style={{ display: "flex", flexWrap: "wrap",alignItems:"center", justifyContent:"center"}} > 
             {data.map(product=>{
                 return (
-                    <div key= {product.id} style = {{width:"400px", margin:"25px", padding:"50px", border:"1px solid black", borderRadius:"10px",textAlign:"center"}}>
-                        <Link to={`/singleProduct/${product.id}`}
-                       state={product}
-                        >
-                            <img src={product.image} width="200" height="200"  alt="bracelets"  />
-                            <h6> {product.title} </h6>
-                        </Link>
-                        <h3>$ {product.price} </h3>
-                        <button onClick={()=>addToBag(product)} >Add to Cart</button>
-                        <ReactStar
-                        count={5}
-                        size={24}
-                        activeColor="#ffd700"
-                        value= {product.rating.rate}
-                        isHalf = {true}
-                        edit = {false}
-                        />
+                    <div key= {product.id} style = {{width:"400px", margin:"25px", padding:"50px", border:"1px solid black", borderRadius:"10px",textAlign:"center", display:"flex", flexDirection:"column"}}>
+                        <div className="card-items">
+                            <Link className="text-decoration" to={`/singleProduct/${product.id}`}
+                            state={product}
+                            >
+                                <img src={product.image} width="200" height="200"  alt="bracelets"  />
+                                <h6 style={{paddingTop:".75rem"}} > {product.title} </h6>
+                            </Link>
+                            <h3 style={{paddingTop:".75rem"}} >$ {product.price} </h3>
+                            
+                            <ReactStar
+                            count={5}
+                            size={24}
+                            activeColor="#ffd700"
+                            value= {product.rating.rate}
+                            isHalf = {true}
+                            edit = {false}
+                            />
+                            <button className="btn" onClick={()=>addToBag(product)} >Add to Cart</button>
+                        </div>
+                           
                     </div>
                         
                         )
@@ -63,4 +67,5 @@ return (
             </div>
         )
         }
+                        
             
