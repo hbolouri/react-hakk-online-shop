@@ -12,7 +12,7 @@ export default function Men() {
 
     return (
         <main >
-            <Section title="Men's Collection" data={ menClothes } />
+            <Section  title="Men's Collection" data={ menClothes } />
             
                 <div className="images-parent-m">
                     <div className="image-left-m">
