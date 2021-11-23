@@ -40,7 +40,7 @@ export default function Navbar() {
       </div>
 
       <div className="NavList-right">
-        <div className="icon">
+        <div id="shopNow" className="icon">
           <FiSearch /> <input type="text" placeholder="Search products" />
         </div>
 
