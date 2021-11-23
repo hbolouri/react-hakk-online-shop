@@ -52,11 +52,11 @@ export default function Navbar() {
   return (
     <nav className="Navbar">
       <div className="NavList-left">
-        <Link to="/">
+        <NavLink to="/">
           <div className="Logo">
             <img width='200' src="./images/shop.png" alt="" />
           </div>
-        </Link>
+        </NavLink>
         <ul className="List-left">
           <li>
             <Link to={"/"}>Home</Link>
