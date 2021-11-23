@@ -72,6 +72,10 @@ export default function Navbar() {
       </div>
 
       <div className="NavList-right">
+
+        <div id="shopNow" className="icon">
+          
+
         <div className="icon">
           <FiSearch />
           <form onSubmit={searchValue} ref={inputRef}>
@@ -130,6 +134,9 @@ export default function Navbar() {
           </Link>
         </div>
       </div>
+      </div>
+
     </nav>
+
   );
 }

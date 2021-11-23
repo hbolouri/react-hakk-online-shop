@@ -6,7 +6,7 @@ export default function Card({ product }) {
   console.log(product);
   return (
     <div className="Card" style={{ backgroundImage: `url(${product.image})` }}>
-      <Link to={`/singleProduct/${product.id}`}>{product.title}</Link>
+      <Link className="remove-underline" to={`/singleProduct/${product.id}`}>{product.title}</Link>
     </div>
   );
 
