@@ -8,6 +8,7 @@ import { Link } from "react-router-dom";
 import { MyContext } from "../../Context/context";
 import ReactStars from "react-rating-stars-component";
 import { MdShoppingCart } from "react-icons/md";
+import Filter from "../../components/FilterProducts/Filter";
 
 const Home = () => {
   const { products, bag, setBag, user } = useContext(MyContext);
@@ -57,6 +58,7 @@ const Home = () => {
       <section>
         <Carousel />
       </section>
+      <Filter />
       <div className="product-all">
         {products.map((product) => {
           return (
