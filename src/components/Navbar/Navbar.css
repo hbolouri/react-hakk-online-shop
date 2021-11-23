@@ -35,7 +35,13 @@
 }
 
 .Logo {
-    margin-right: 4rem;
+    /* margin-right: 4rem; */
+}
+
+.Logo img {
+    border: 1px solid black;
+    margin: -1rem;
+    padding: 0;
 }
 
 .NavList-right {

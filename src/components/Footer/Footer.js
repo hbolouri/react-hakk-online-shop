@@ -7,7 +7,7 @@ export default function Footer() {
         <footer className='Footer'>
             <div className='Box'>
             <ul className='Icons'>
-                   <li> <FaFacebook/></li>
+                   <a href='https://www.facebook.com/'><li> <FaFacebook/></li></a>
                    <li><FaInstagram/></li>
                    <li> <FaTwitter/></li>
                </ul>

@@ -4,7 +4,7 @@ import './Kids.css'
 import { menClothes, womenClothes, kidsClothes } from '../../api/products'
 import Products from '../../components/Section/Products'
 import Section from '../../components/Section/Section'
-import { Anchor } from 'antd';
+import { Anchor } from 'antd'
 const { Link } = Anchor;
 
 

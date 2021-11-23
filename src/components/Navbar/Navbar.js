@@ -53,7 +53,9 @@ export default function Navbar() {
     <nav className="Navbar">
       <div className="NavList-left">
         <Link to="/">
-          <div className="Logo">Logo</div>
+          <div className="Logo">
+            <img width='200' src="./images/shop.png" alt="" />
+          </div>
         </Link>
         <ul className="List-left">
           <li>
