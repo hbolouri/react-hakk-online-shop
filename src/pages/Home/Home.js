@@ -71,7 +71,9 @@ const Home = () => {
                 <div>
                   <img src={product.image} alt="" width="200" />
                 </div>
-                <h1>${product.price}</h1>
+                <h1 className={product.price >= 100 ? "sale" : "normal"}>
+                  ${product.price}
+                </h1>
                 <ReactStars
                   count={5}
                   size={24}
