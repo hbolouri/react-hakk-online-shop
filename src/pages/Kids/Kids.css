@@ -10,8 +10,7 @@
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
-    /* opacity:.9; */
-    border: 1px solid black;
+    opacity:.9;
     width: 50%;
     height: 600px;
     display: flex;
@@ -20,19 +19,22 @@
     z-index: 3;
 
   }
-  
-
-  .image-text-k{
-    margin-right: -210px;
+  .image-text-k {
+    margin-right: -200px;
   }
-
+  
+  .image-text-k > * {
+  font-family: "Cormorant Garamond", serif;
+  font-weight: bold;
+  display: block;
+  }
+  
   .image-right-k {
     background-image: url("https://afroculture.net/wp-content/uploads/2015/01/Pagne-boubou-africain-Les-enfants-en-tenue-traditionnele-africain.jpg");
     background-repeat: no-repeat;
     background-size:cover;
     background-position: center;
     opacity: .9;
-    border: 1px solid black;
     width: 50%;
     height: 600px;
   }
