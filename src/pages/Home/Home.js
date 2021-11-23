@@ -37,7 +37,7 @@ const Home = () => {
       backSpeed: 20,
       typeSpeed: 50,
       strings: [
-        "WELCOME HAKK (Hengameh Adem Kany Krishna) ONLINE SHOP ",
+        "WELCOME HAKK ONLINE SHOP ",
         "Men",
         "Women",
         "Kids",
