@@ -1,6 +1,6 @@
 import React, { useContext, useState, useRef } from "react";
 import "./Navbar.css";
-import { Link } from "react-router-dom";
+import { NavLink, Link } from "react-router-dom";
 import { FiSearch } from "react-icons/fi";
 import { BiLogIn } from "react-icons/bi";
 import { GrContact } from "react-icons/gr";
@@ -52,36 +52,41 @@ export default function Navbar() {
   return (
     <nav className="Navbar">
       <div className="NavList-left">
-        <NavLink to="/">
+        <Link  to="/">
           <div className="Logo">
-            <img width='200' src="./images/shop.png" alt="" />
+            <img width='100' src="./images/Logo.png" alt="" />
           </div>
-        </NavLink>
+        </Link>
         <ul className="List-left">
           <li>
-            <Link to={"/"}>Home</Link>
+            <NavLink className={(node) => node.isActive ? 'myActiveClass' : 'myNotActiveClass'} to={"/"}>Home</NavLink>
           </li>
           <li>
-            <Link to="/women">Women</Link>
+            <NavLink className={(node) => node.isActive ? 'myActiveClass' : 'myNotActiveClass'} to="/women">Women</NavLink>
           </li>
           <li>
-            <Link to="/men">Men</Link>
+            <NavLink className={(node) => node.isActive ? 'myActiveClass' : 'myNotActiveClass'} to="/men">Men</NavLink>
           </li>
           <li>
-            <Link to="/kids">Kids</Link>
+            <NavLink className={(node) => node.isActive ? 'myActiveClass' : 'myNotActiveClass'} to="/kids">Kids</NavLink>
           </li>
         </ul>
       </div>
+      
 
       <div className="NavList-right">
 
-        <div id="shopNow" className="icon">
+        <div id="shopNow" className="search-bar">
           
 
         <div className="icon">
-          <FiSearch />
+          
           <form onSubmit={searchValue} ref={inputRef}>
-            <input
+          
+          <div>
+            <div className='BarSearch'>
+          <FiSearch size='25px' />
+           <input
               // onChange={searchProduct}
               className="search"
               type="text"
@@ -89,15 +94,19 @@ export default function Navbar() {
               //name is important for useREf
               placeholder="Search products"
             />
-            <button style={{ marginTop: "0" }} type="submit" name="search">
+            
+              
+          </div>
+          <span className='btn-search' type="submit" name="search">
               Search
-            </button>
-            <button
-              style={{ marginTop: "0" }}
-              onClick={() => window.location.reload(true)}
-            >
-              Refresh
-            </button>
+            </span>
+          </div>
+          
+           
+            
+            
+            
+            
           </form>
         </div>
 
@@ -108,15 +117,18 @@ export default function Navbar() {
               Welcome {user.displayName}
             </Link>
           ) : (
-            <Link to="/login">
+            <NavLink className={(node) => node.isActive ? 'myActiveClass' : 'myNotActiveClass'} to="/login">
               <BiLogIn /> Login
-            </Link>
+            </NavLink>
           )}
         </div>
         <div>
-          <Button variant="light" onClick={handleShow}>
-            <GrContact /> Contact
-          </Button>
+          <NavLink className={(node) => node.isActive ? 'myActiveClass' : 'myNotActiveClass'} to='/contact'>
+          <button className='btn-contact'  onClick={handleShow}>
+            <GrContact/> Contact
+          </button>
+          </NavLink>
+          
 
           <Modal size="lg" show={show} onHide={handleClose}>
             <Modal.Header closeButton></Modal.Header>
@@ -131,9 +143,10 @@ export default function Navbar() {
           </Modal>
         </div>
         <div>
-          <Link to="/shoppingBag">
-            <FiShoppingCart /> Shopping bag ({quantity})
-          </Link>
+          <NavLink className={(node) => node.isActive ? 'myActiveClass' : 'myNotActiveClass'} to="/shoppingBag">
+            
+            <FiShoppingCart /> Shopping bag <span className='quantity'>{quantity}</span>
+          </NavLink>
         </div>
       </div>
       </div>
