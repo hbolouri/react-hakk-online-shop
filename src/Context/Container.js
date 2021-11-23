@@ -6,6 +6,7 @@ const Container = (props) => {
   const [products, setProducts] = useState([]);
   const [bag, setBag] = useState([]); //use for krishna
   const [quantity, setQuantity] = useState(0);
+  const [totalPrice, setTotalPrice] = useState(0);
 
   useEffect(() => {
     setProducts(data);
@@ -22,6 +23,8 @@ const Container = (props) => {
         setBag,
         quantity,
         setQuantity,
+        totalPrice,
+        setTotalPrice,
       }}
     >
       {props.children}

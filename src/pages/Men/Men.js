@@ -8,8 +8,6 @@ import { Anchor } from 'antd';
 const { Link } = Anchor;
 
 
-
-
 export default function Men() {
 
     return (
@@ -39,3 +37,4 @@ export default function Men() {
 
     }
                             
+

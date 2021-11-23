@@ -2,7 +2,7 @@ import React, { useContext } from "react";
 import "./Profile.css";
 //for singout
 import { getAuth, signOut } from "firebase/auth";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { MyContext } from "../../Context/context";
 
 const auth = getAuth();
@@ -36,9 +36,14 @@ const Profile = () => {
         </div>
       )}
 
-      <button className="btn-prima" onClick={logOutGoogle}>
-        Logout
-      </button>
+      <div>
+        <button className="btn-prima" onClick={logOutGoogle}>
+          Logout
+        </button>
+        <Link to="/">
+          <button>Go Home Page</button>
+        </Link>
+      </div>
     </div>
   );
 };
