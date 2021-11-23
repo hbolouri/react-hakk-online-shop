@@ -14,7 +14,7 @@ import { MyContext } from "../../Context/context";
 export default function Navbar() {
   const inputRef = useRef();
   const [show, setShow] = useState(false);
-  const { user, quantity, products, setProducts } = useContext(MyContext);
+  const { user, quantity, products, setProducts, data } = useContext(MyContext);
 
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
@@ -33,7 +33,7 @@ export default function Navbar() {
     e.preventDefault();
     // console.log(inputRef.current.searchItem.value);
 
-    let updatedProducts = products.filter(
+    let updatedProducts = data.filter(
       (product) =>
         product.category
           .toLowerCase()
@@ -72,71 +72,60 @@ export default function Navbar() {
       </div>
 
       <div className="NavList-right">
-
         <div id="shopNow" className="icon">
-          
+          <div className="icon">
+            <FiSearch />
+            <form onSubmit={searchValue} ref={inputRef}>
+              <input
+                onFocus={() => setProducts(data)}
+                className="search"
+                type="text"
+                name="searchItem"
+                //name is important for useREf
+                placeholder="Search products"
+              />
+              <button type="submit" name="search">
+                Search
+              </button>
+            </form>
+          </div>
 
-        <div className="icon">
-          <FiSearch />
-          <form onSubmit={searchValue} ref={inputRef}>
-            <input
-              // onChange={searchProduct}
-              className="search"
-              type="text"
-              name="searchItem"
-              //name is important for useREf
-              placeholder="Search products"
-            />
-            <button style={{ marginTop: "0" }} type="submit" name="search">
-              Search
-            </button>
-            <button
-              style={{ marginTop: "0" }}
-              onClick={() => window.location.reload(true)}
-            >
-              Refresh
-            </button>
-          </form>
-        </div>
+          <div>
+            {user ? (
+              <Link to="/profile">
+                <BsFillPersonCheckFill />
+                Welcome {user.displayName}
+              </Link>
+            ) : (
+              <Link to="/login">
+                <BiLogIn /> Login
+              </Link>
+            )}
+          </div>
+          <div>
+            <Button variant="light" onClick={handleShow}>
+              <GrContact /> Contact
+            </Button>
 
-        <div>
-          {user ? (
-            <Link to="/profile">
-              <BsFillPersonCheckFill />
-              Welcome {user.displayName}
+            <Modal size="lg" show={show} onHide={handleClose}>
+              <Modal.Header closeButton></Modal.Header>
+              <Modal.Body>
+                <Contact />
+              </Modal.Body>
+              <Modal.Footer>
+                <Button variant="secondary" onClick={handleClose}>
+                  Close
+                </Button>
+              </Modal.Footer>
+            </Modal>
+          </div>
+          <div>
+            <Link to="/shoppingBag">
+              <FiShoppingCart /> Shopping bag ({quantity})
             </Link>
-          ) : (
-            <Link to="/login">
-              <BiLogIn /> Login
-            </Link>
-          )}
-        </div>
-        <div>
-          <Button variant="light" onClick={handleShow}>
-            <GrContact /> Contact
-          </Button>
-
-          <Modal size="lg" show={show} onHide={handleClose}>
-            <Modal.Header closeButton></Modal.Header>
-            <Modal.Body>
-              <Contact />
-            </Modal.Body>
-            <Modal.Footer>
-              <Button variant="secondary" onClick={handleClose}>
-                Close
-              </Button>
-            </Modal.Footer>
-          </Modal>
-        </div>
-        <div>
-          <Link to="/shoppingBag">
-            <FiShoppingCart /> Shopping bag ({quantity})
-          </Link>
+          </div>
         </div>
       </div>
-      </div>
-
     </nav>
-
   );
 }

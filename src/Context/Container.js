@@ -25,6 +25,7 @@ const Container = (props) => {
         setQuantity,
         totalPrice,
         setTotalPrice,
+        data,
       }}
     >
       {props.children}

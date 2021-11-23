@@ -9,7 +9,7 @@ export const menClothes = [
     image:
       "https://www.engelhorn.de/dw/image/v2/AALR_PRD/on/demandware.static/-/Sites-engelhorn-master-plattform/default/dw6a355b76/images/P10/00/21/8H/V1000334D/engelhorn-Gucci-Herren-T-Shirt-Vorderansicht-V1000334D-v1.jpg",
     rating: {
-      rate: 3.9,
+      rate: 4.5,
       count: 120,
     },
   },
@@ -23,7 +23,7 @@ export const menClothes = [
     image:
       "https://sc01.alicdn.com/kf/HTB1eD8.PrvpK1RjSZPiq6zmwXXaT/New-formal-shirts-and-pants-combination-luxury.jpg",
     rating: {
-      rate: 4.1,
+      rate: 4,
       count: 259,
     },
   },
@@ -50,7 +50,7 @@ export const menClothes = [
     category: "men's clothing",
     image: "https://sc02.alicdn.com/kf/H3453c88eedb3428983fc8b5b7bb5f4d7J.jpg",
     rating: {
-      rate: 2.1,
+      rate: 2,
       count: 430,
     },
   },
@@ -64,7 +64,7 @@ export const menClothes = [
     image:
       "https://sc02.alicdn.com/kf/H3554a8539bd947d5a9d682275d7c667bb/formal-shirts-and-pants-combination-men-formal.png",
     rating: {
-      rate: 2.1,
+      rate: 2,
       count: 430,
     },
   },
@@ -78,7 +78,7 @@ export const menClothes = [
     image:
       "https://sc02.alicdn.com/kf/H3554a8539bd947d5a9d682275d7c667bb/formal-shirts-and-pants-combination-men-formal.png",
     rating: {
-      rate: 2.1,
+      rate: 2,
       count: 430,
     },
   },
@@ -92,7 +92,7 @@ export const menClothes = [
     image:
       "https://sc02.alicdn.com/kf/H3554a8539bd947d5a9d682275d7c667bb/formal-shirts-and-pants-combination-men-formal.png",
     rating: {
-      rate: 2.1,
+      rate: 2,
       count: 430,
     },
   },
@@ -106,7 +106,7 @@ export const menClothes = [
     image:
       "https://sc02.alicdn.com/kf/H3554a8539bd947d5a9d682275d7c667bb/formal-shirts-and-pants-combination-men-formal.png",
     rating: {
-      rate: 2.1,
+      rate: 2,
       count: 430,
     },
   },
@@ -135,7 +135,7 @@ export const womenClothes = [
     category: "women's clothing",
     image: "https://fakestoreapi.com/img/81XH0e8fefL._AC_UY879_.jpg",
     rating: {
-      rate: 2.9,
+      rate: 2.5,
       count: 340,
     },
   },
@@ -148,7 +148,7 @@ export const womenClothes = [
     category: "women's clothing",
     image: "https://fakestoreapi.com/img/71HblAHs5xL._AC_UY879_-2.jpg",
     rating: {
-      rate: 3.8,
+      rate: 2,
       count: 679,
     },
   },
@@ -161,7 +161,7 @@ export const womenClothes = [
     category: "women's clothing",
     image: "https://fakestoreapi.com/img/71z3kpMAYsL._AC_UY879_.jpg",
     rating: {
-      rate: 4.7,
+      rate: 2,
       count: 130,
     },
   },
@@ -174,7 +174,7 @@ export const womenClothes = [
     category: "women's clothing",
     image: "https://fakestoreapi.com/img/51eg55uWmdL._AC_UX679_.jpg",
     rating: {
-      rate: 4.5,
+      rate: 2,
       count: 146,
     },
   },
@@ -187,7 +187,7 @@ export const womenClothes = [
     category: "women's clothing",
     image: "https://fakestoreapi.com/img/61pHAEJ4NML._AC_UX679_.jpg",
     rating: {
-      rate: 3.6,
+      rate: 2,
       count: 145,
     },
   },
@@ -200,7 +200,7 @@ export const womenClothes = [
     category: "women's clothing",
     image: "https://fakestoreapi.com/img/61pHAEJ4NML._AC_UX679_.jpg",
     rating: {
-      rate: 3.6,
+      rate: 2,
       count: 145,
     },
   },
@@ -213,7 +213,7 @@ export const womenClothes = [
     category: "women's clothing",
     image: "https://fakestoreapi.com/img/61pHAEJ4NML._AC_UX679_.jpg",
     rating: {
-      rate: 3.6,
+      rate: 2,
       count: 145,
     },
   },
@@ -226,11 +226,11 @@ export const kidsClothes = [
     price: 55,
     description:
       "From our Legends Collection, the Naga was inspired by the mythical water dragon that protects the ocean's pearl. Wear facing inward to be bestowed with love and abundance, or outward for protection.",
-    category: "jewelery",
+    category: "kid's clothing",
     image:
       "https://4.imimg.com/data4/IA/WC/MY-819866/ladies-printed-t-shirt-500x500.jpg",
     rating: {
-      rate: 4.6,
+      rate: 2,
       count: 400,
     },
   },
@@ -240,11 +240,11 @@ export const kidsClothes = [
     price: 168,
     description:
       "Satisfaction Guaranteed. Return or exchange any order within 30 days.Designed and sold by Hafeez Center in the United States. Satisfaction Guaranteed. Return or exchange any order within 30 days.",
-    category: "jewelery",
+    category: "kid's clothing",
     image:
       "https://5.imimg.com/data5/SELLER/Default/2021/11/FQ/NT/VO/2190204/s-bp-7-500x500.jpg",
     rating: {
-      rate: 3.9,
+      rate: 2,
       count: 70,
     },
   },
@@ -254,11 +254,11 @@ export const kidsClothes = [
     price: 9.99,
     description:
       "Classic Created Wedding Engagement Solitaire Diamond Promise Ring for Her. Gifts to spoil your love more for Engagement, Wedding, Anniversary, Valentine's Day...",
-    category: "jewelery",
+    category: "kid's clothing",
     image:
       "https://www.nicepng.com/png/full/245-2451327_he-hello-enjoy-children-clothing-girls-fashion-kids.png",
     rating: {
-      rate: 3,
+      rate: 2,
       count: 400,
     },
   },
@@ -268,7 +268,7 @@ export const kidsClothes = [
     price: 10.99,
     description:
       "Rose Gold Plated Double Flared Tunnel Plug Earrings. Made of 316L Stainless Steel",
-    category: "jewelery",
+    category: "kid's clothing",
     image:
       "https://p.kindpng.com/picc/s/733-7333530_child-model-fashion-show-kids-boy-fashion-model.png",
     rating: {
@@ -282,11 +282,11 @@ export const kidsClothes = [
     price: 64,
     description:
       "USB 3.0 and USB 2.0 Compatibility Fast data transfers Improve PC Performance High Capacity; Compatibility Formatted NTFS for Windows 10, Windows 8.1, Windows 7; Reformatting may be required for other operating systems; Compatibility may vary depending on user's hardware configuration and operating system",
-    category: "electronics",
+    category: "kid's clothing",
     image:
       "https://previews.123rf.com/images/lufimorgan/lufimorgan1805/lufimorgan180500124/101355046-asian-child-drinking-milk-from-a-glass-and-measuring-himself-on-white-background-isolated.jpg",
     rating: {
-      rate: 3.3,
+      rate: 2,
       count: 203,
     },
   },
@@ -297,11 +297,11 @@ export const kidsClothes = [
     price: 109,
     description:
       "3D NAND flash are applied to deliver high transfer speeds Remarkable transfer speeds that enable faster bootup and improved overall system performance. The advanced SLC Cache Technology allows performance boost and longer lifespan 7mm slim design suitable for Ultrabooks and Ultra-slim notebooks. Supports TRIM command, Garbage Collection technology, RAID, and ECC (Error Checking & Correction) to provide the optimized performance and enhanced reliability.",
-    category: "electronics",
+    category: "kid's clothing",
     image:
       "https://previews.123rf.com/images/dolgachov/dolgachov1603/dolgachov160302771/53475908-childhood-fashion-and-people-concept-happy-smiling-boy-and-girl-standing-back-to-back.jpg",
     rating: {
-      rate: 4.8,
+      rate: 2,
       count: 319,
     },
   },
@@ -311,11 +311,11 @@ export const kidsClothes = [
     price: 64,
     description:
       "USB 3.0 and USB 2.0 Compatibility Fast data transfers Improve PC Performance High Capacity; Compatibility Formatted NTFS for Windows 10, Windows 8.1, Windows 7; Reformatting may be required for other operating systems; Compatibility may vary depending on user's hardware configuration and operating system",
-    category: "electronics",
+    category: "kid's clothing",
     image:
       "https://previews.123rf.com/images/lufimorgan/lufimorgan1805/lufimorgan180500124/101355046-asian-child-drinking-milk-from-a-glass-and-measuring-himself-on-white-background-isolated.jpg",
     rating: {
-      rate: 3.3,
+      rate: 2,
       count: 203,
     },
   },
@@ -325,11 +325,11 @@ export const kidsClothes = [
     price: 9.99,
     description:
       "Classic Created Wedding Engagement Solitaire Diamond Promise Ring for Her. Gifts to spoil your love more for Engagement, Wedding, Anniversary, Valentine's Day...",
-    category: "jewelery",
+    category: "kid's clothing",
     image:
       "https://www.nicepng.com/png/full/245-2451327_he-hello-enjoy-children-clothing-girls-fashion-kids.png",
     rating: {
-      rate: 3,
+      rate: 2,
       count: 400,
     },
   },
