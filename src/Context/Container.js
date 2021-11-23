@@ -4,9 +4,10 @@ import data from "../api/products";
 const Container = (props) => {
   const [user, setUser] = useState(null);
   const [products, setProducts] = useState([]);
-  const [bag, setBag] = useState([]); //use for krishna
+  const [bag, setBag] = useState([]);
   const [quantity, setQuantity] = useState(0);
   const [totalPrice, setTotalPrice] = useState(0);
+  const originalData = data;
 
   useEffect(() => {
     setProducts(data);
@@ -24,7 +25,7 @@ const Container = (props) => {
         quantity,
         setQuantity,
         totalPrice,
-        setTotalPrice,
+        setTotalPrice, originalData 
       }}
     >
       {props.children}

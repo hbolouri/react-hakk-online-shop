@@ -11,10 +11,11 @@ import { Modal } from "react-bootstrap";
 import Contact from "../Contact/Contact";
 import { MyContext } from "../../Context/context";
 
+
 export default function Navbar() {
   const inputRef = useRef();
   const [show, setShow] = useState(false);
-  const { user, quantity, products, setProducts } = useContext(MyContext);
+  const { user, quantity, products, setProducts, originalData } = useContext(MyContext);
 
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
@@ -30,10 +31,11 @@ export default function Navbar() {
 
   //useRef()
   const searchValue = (e) => {
+
     e.preventDefault();
     // console.log(inputRef.current.searchItem.value);
 
-    let updatedProducts = products.filter(
+    let updatedProducts = originalData.filter(
       (product) =>
         product.category
           .toLowerCase()
