@@ -1,5 +1,6 @@
 import React from "react";
 import "./NotFound.css";
+import { Link } from "react-router-dom";
 // import { useHistory } from "react-router-dom";
 
 const NotFound = () => {
@@ -12,10 +13,9 @@ const NotFound = () => {
         alt=""
         width="700"
       />
-      {/* <button onClick={() => history.goBack()}>Back</button> */}
-      {/* <button onClick={() => props.history.push("/men")}>Men</button>
-      <button onClick={() => props.history.push("/women")}>Women</button>
-      <button onClick={() => props.history.push("/kids")}>Kids</button> */}
+      <Link to="/">
+        <button>Go Home Page</button>
+      </Link>
     </div>
   );
 };
