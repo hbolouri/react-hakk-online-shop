@@ -5,10 +5,11 @@ import { FaFilter } from "react-icons/fa";
 
 const Filter = () => {
   const formRef = useRef();
-  const { products, setProducts } = useContext(MyContext);
+  const { products, setProducts, data } = useContext(MyContext);
   const [category, setCategory] = useState("all");
   const [star, setStar] = useState(0);
   const [price, setPrice] = useState(0);
+  const [defaultPrice, setDefaultPrice] = useState({ d: 0 });
 
   const getDataFromForm = (e) => {
     e.preventDefault();
@@ -20,17 +21,26 @@ const Filter = () => {
     console.log(category);
     console.log(star);
     console.log(price);
-    let tempProducts;
+    console.log(defaultPrice);
+
     if (category !== "all") {
-      tempProducts = products.filter(
-        (product) => product.category == category && product.rating.rate == star
+      let tempProducts = data.filter(
+        (product) =>
+          product.category === category &&
+          product.rating.rate >= star &&
+          product.price <= price
       );
       setProducts(tempProducts);
     }
   };
 
+  // const getRangeValue = (e) => {
+  //   let value = e.target.price.value;
+  //   setDefaultPrice(value);
+  // };
+
   return (
-    <div>
+    <div className="filter">
       <h1>Filtered Items</h1>
       <form onSubmit={getDataFromForm} ref={formRef} className="filter-form">
         {/* select the category */}
@@ -64,16 +74,18 @@ const Filter = () => {
         <div className="form-group">
           {/* <label htmlFor="price">Room Price ${price}</label> */}
           <label className="price" htmlFor="price">
-            Price{" "}
+            Price : ${defaultPrice.d}
           </label>
           <input
-            onChange={(e) => e.target.value}
+            onChange={(e) =>
+              setDefaultPrice({ ...defaultPrice, d: e.target.value })
+            }
             type="range"
             name="price"
             id="price"
             min="5"
             max="1000"
-            defaultValue="500"
+            // defaultValue={defaultPrice}
             class="slider"
           />
         </div>
