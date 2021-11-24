@@ -11,11 +11,10 @@ import { Modal } from "react-bootstrap";
 import Contact from "../Contact/Contact";
 import { MyContext } from "../../Context/context";
 
-
 export default function Navbar() {
   const inputRef = useRef();
   const [show, setShow] = useState(false);
-  const { user, quantity, products, setProducts, data } = useContext(MyContext);
+  const { user, quantity, setProducts, data } = useContext(MyContext);
 
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
@@ -31,7 +30,6 @@ export default function Navbar() {
 
   //useRef()
   const searchValue = (e) => {
-
     e.preventDefault();
     // console.log(inputRef.current.searchItem.value);
 
@@ -56,106 +54,140 @@ export default function Navbar() {
   return (
     <nav className="Navbar">
       <div className="NavList-left">
-        <Link  to="/">
+        <Link to="/">
           <div className="Logo">
-            <img width='100' src="./images/Logo.png" alt="" />
+            <img width="100" src="./images/Logo.png" alt="" />
           </div>
         </Link>
         <ul className="List-left">
           <li>
-            <NavLink className={(node) => node.isActive ? 'myActiveClass' : 'myNotActiveClass'} to={"/"}>Home</NavLink>
+            <NavLink
+              className={(node) =>
+                node.isActive ? "myActiveClass" : "myNotActiveClass"
+              }
+              to={"/"}
+            >
+              Home
+            </NavLink>
           </li>
           <li>
-            <NavLink className={(node) => node.isActive ? 'myActiveClass' : 'myNotActiveClass'} to="/women">Women</NavLink>
+            <NavLink
+              className={(node) =>
+                node.isActive ? "myActiveClass" : "myNotActiveClass"
+              }
+              to="/women"
+            >
+              Women
+            </NavLink>
           </li>
           <li>
-            <NavLink className={(node) => node.isActive ? 'myActiveClass' : 'myNotActiveClass'} to="/men">Men</NavLink>
+            <NavLink
+              className={(node) =>
+                node.isActive ? "myActiveClass" : "myNotActiveClass"
+              }
+              to="/men"
+            >
+              Men
+            </NavLink>
           </li>
           <li>
-            <NavLink className={(node) => node.isActive ? 'myActiveClass' : 'myNotActiveClass'} to="/kids">Kids</NavLink>
+            <NavLink
+              className={(node) =>
+                node.isActive ? "myActiveClass" : "myNotActiveClass"
+              }
+              to="/kids"
+            >
+              Kids
+            </NavLink>
           </li>
         </ul>
       </div>
-      
 
       <div className="NavList-right">
-
         <div id="shopNow" className="search-bar">
-          
+          <div className="icon">
+            <form onSubmit={searchValue} ref={inputRef}>
+              <div>
+                <div className="BarSearch">
 
-        <div className="icon">
-          
-          <form onSubmit={searchValue} ref={inputRef}>
-          
+
+
+                  <input
+                    // onChange={searchProduct}
+                    onFocus={() => setProducts(data)}
+                    className="search"
+                    type="text"
+                    name="searchItem"
+                    //name is important for useREf
+                    placeholder="Search products"
+                  />
+
+
+                  <button className="btn-search" type="submit" name="search">
+                    <FiSearch size="25px" />
+                  </button>
+                </div>
+              </div>
+            </form>
+          </div>
+
           <div>
-            <div className='BarSearch'>
-          <FiSearch size='25px' />
-           <input
-              // onChange={searchProduct}
-              // onFocus={() => setProducts(data)}
-              className="search"
-              type="text"
-              name="searchItem"
-              //name is important for useREf
-              placeholder="Search products"
-            />
-            
-              
-          </div>
-          <button>
-            <span className='btn-search' type="submit" name="search">
-                Search
-              </span>
-          </button>
-          </div>
-          
-           
-            
-            
-            
-            
-          </form>
-        </div>
+            {user ? (
+              <Link to="/profile">
+                <BsFillPersonCheckFill />
+                Welcome {user.displayName}
+              </Link>
+            ) : (
+              <NavLink
+                className={(node) =>
+                  node.isActive ? "myActiveClass" : "myNotActiveClass"
+                }
+                to="/login"
+              >
+                <BiLogIn /> Login
+              </NavLink>
+            )}
 
-        <div>
-          {user ? (
-            <Link to="/profile">
-              <BsFillPersonCheckFill />
-              Welcome {user.displayName}
-            </Link>
-          ) : (
-            <NavLink className={(node) => node.isActive ? 'myActiveClass' : 'myNotActiveClass'} to="/login">
-              <BiLogIn /> Login
+          </div>
+
+                
+
+          <div>
+            <NavLink
+              className={(node) =>
+                node.isActive ? "myActiveClass" : "myNotActiveClass"
+              }
+              to="/contact"
+            >
+              <button className="btn-contact" onClick={handleShow}>
+                <GrContact /> Contact
+              </button>
             </NavLink>
-          )}
-        </div>
-        <div>
-          <NavLink className={(node) => node.isActive ? 'myActiveClass' : 'myNotActiveClass'} to='/contact'>
-          <button className='btn-contact'  onClick={handleShow}>
-            <GrContact/> Contact
-          </button>
-          </NavLink>
-          
 
-          <Modal size="lg" show={show} onHide={handleClose}>
-            <Modal.Header closeButton></Modal.Header>
-            <Modal.Body>
-              <Contact />
-            </Modal.Body>
-            <Modal.Footer>
-              <Button variant="secondary" onClick={handleClose}>
-                Close
-              </Button>
-            </Modal.Footer>
-          </Modal>
+            <Modal size="lg" show={show} onHide={handleClose}>
+              <Modal.Header closeButton></Modal.Header>
+              <Modal.Body>
+                <Contact />
+              </Modal.Body>
+              <Modal.Footer>
+                <Button variant="secondary" onClick={handleClose}>
+                  Close
+                </Button>
+              </Modal.Footer>
+            </Modal>
+          </div>
+          <div>
+            <NavLink
+              className={(node) =>
+                node.isActive ? "myActiveClass" : "myNotActiveClass"
+              }
+              to="/shoppingBag"
+            >
+              <FiShoppingCart /> Shopping bag{" "}
+              <span className="quantity">{quantity}</span>
+            </NavLink>
+          </div>
         </div>
-        <div>
-          <NavLink className={(node) => node.isActive ? 'myActiveClass' : 'myNotActiveClass'} to="/shoppingBag">
-            
-            <FiShoppingCart /> Shopping bag <span className='quantity'>{quantity}</span>
-          </NavLink>
-        </div>
-      </div>
       </div>
     </nav>
   );

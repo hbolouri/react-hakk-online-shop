@@ -1,22 +1,21 @@
- 
-  .images-parent-k{
+.images-parent-k {
     display: flex;
     height: 600px;
-  }
+}
 
-
-  .image-left-k {
+.image-left-k {
     background-image: url("https://i.pinimg.com/564x/aa/e0/fd/aae0fdb97de35d07d2062b48eb3b21fb--kids-diy-cute-kids.jpg");
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
-    opacity:.9;
+    opacity: 0.9;
     width: 50%;
     height: 600px;
     display: flex;
     justify-content: flex-end;
     align-items: flex-end;
     z-index: 3;
+
 
   }
 
@@ -40,28 +39,23 @@
   }
   
   .image-right-k {
+
     background-image: url("https://afroculture.net/wp-content/uploads/2015/01/Pagne-boubou-africain-Les-enfants-en-tenue-traditionnele-africain.jpg");
     background-repeat: no-repeat;
-    background-size:cover;
+    background-size: cover;
     background-position: center;
-    opacity: .9;
+    opacity: 0.9;
     width: 50%;
     height: 600px;
-  }
+}
 
 .btn-image {
-    position:relative;
-    left:6rem;
+    position: relative;
+    left: 6rem;
     margin: 1rem;
     padding: 1rem;
-  }
+}
 
-
-  .kid-all {
+.kid-all {
     margin-top: 5rem;
-  }
-  
-
-
-
- 
+}

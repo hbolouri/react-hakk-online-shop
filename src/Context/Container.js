@@ -10,6 +10,7 @@ const Container = (props) => {
   const [bag, setBag] = useState([]);
   const [quantity, setQuantity] = useState(0);
   const [totalPrice, setTotalPrice] = useState(0);
+
   
 
   useEffect(() => {

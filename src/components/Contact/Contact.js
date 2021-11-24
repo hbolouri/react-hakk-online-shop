@@ -49,24 +49,36 @@ const Contact = () => {
                   <div className="name">
                     <label>Full Name</label>
                     <br />
-                    <input type="text" placeholder="Type full name here" />
+                    <input
+                      type="text"
+                      placeholder="Type full name here"
+                      required
+                    />
                   </div>
                   <div className="email">
                     <label>Email</label>
                     <br />
-                    <input type="email" placeholder="Type email here" />
+                    <input
+                      type="email"
+                      placeholder="Type email here"
+                      required
+                    />
                   </div>
                 </div>
                 <div className="telephone-organisation">
                   <div className="tel">
                     <label>Telephone</label>
                     <br />
-                    <input type="tel" placeholder="Phone number" />
+                    <input type="tel" placeholder="Phone number" required />
                   </div>
                   <div className="organisation">
                     <label>Organisation</label>
                     <br />
-                    <input type="text" placeholder="Organisation name" />
+                    <input
+                      type="text"
+                      placeholder="Organisation name"
+                      required
+                    />
                   </div>
                 </div>
                 <br />
