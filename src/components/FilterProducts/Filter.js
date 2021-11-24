@@ -9,7 +9,7 @@ const Filter = () => {
   const [category, setCategory] = useState("all");
   const [star, setStar] = useState(0);
   const [price, setPrice] = useState(0);
-  const [defaultPrice, setDefaultPrice] = useState({ d: 0 });
+  const [defaultPrice, setDefaultPrice] = useState({ d: 500 });
 
   const getDataFromForm = (e) => {
     e.preventDefault();
