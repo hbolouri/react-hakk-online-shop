@@ -9,7 +9,6 @@
     background-size: cover;
     background-position: center;
     /* opacity:.9; */
-    border: 1px solid black;
     width: 50%;
     height: 600px;
     display: flex;
@@ -49,16 +48,26 @@
     background-size: cover;
     background-position: center;
     opacity: 0.9;
-    border: 1px solid black;
     width: 50%;
     height: 600px;
 }
 
-.btn-image-m {
+.btn-image {
     position: relative;
     left: 6rem;
     margin: 1rem;
     padding: 1rem;
+    border: none;
+}
+
+.btn-image:hover {
+    transform: scale(1.1);
+    background: rgb(84,157,227);
+    background: linear-gradient(90deg, rgba(84,157,227,0.6558998599439776) 8%, rgba(108,183,231,1) 43%, rgba(206,120,242,0.5494572829131652) 80%);
+    color:white;
+    border: none;
+    transform: scale(1.123);
+
 }
 
 .men-all {
@@ -66,13 +75,3 @@
 }
 
 
-/* .hi {
-    color: #fff;
-    background: rgba(255, 255, 255, 0.2);
-    -webkit-backdrop-filter: blur(70px);
-    backdrop-filter: blur(70px);
-    background-clip: padding-box;
-    border-radius: 20px;
-    box-shadow: inset 12px 12px 16px 0 rgb(0 0 0 / 64%), inset -8px -8px 12px 0 rgb(255 255 255 / 30%);
-    overflow: hidden;
-} */
