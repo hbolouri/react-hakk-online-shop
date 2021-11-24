@@ -36,6 +36,7 @@ export default function Navbar() {
     // console.log(inputRef.current.searchItem.value);
 
     let updatedProducts = data.filter(
+      
       (product) =>
         product.category
           .toLowerCase()
@@ -48,6 +49,7 @@ export default function Navbar() {
           .includes(inputRef.current.searchItem.value.toLowerCase())
     );
     setProducts(updatedProducts);
+    console.log(updatedProducts);
     inputRef.current.searchItem.value = "";
   };
 
@@ -90,7 +92,7 @@ export default function Navbar() {
           <FiSearch size='25px' />
            <input
               // onChange={searchProduct}
-              onFocus={() => setProducts(data)}
+              // onFocus={() => setProducts(data)}
               className="search"
               type="text"
               name="searchItem"
@@ -100,9 +102,11 @@ export default function Navbar() {
             
               
           </div>
-          <span className='btn-search' type="submit" name="search">
-              Search
-            </span>
+          <button>
+            <span className='btn-search' type="submit" name="search">
+                Search
+              </span>
+          </button>
           </div>
           
            

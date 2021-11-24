@@ -242,7 +242,7 @@ export const kidsClothes = [
     },
     {
         id: 12,
-        title: "pyjamas for your little kido",
+        title: "pyjamas for  your kid's  little kido",
         price: 168,
         description: "Satisfaction Guaranteed. Return or exchange any order within 30 days.Designed and sold by Hafeez Center in the United States. Satisfaction Guaranteed. Return or exchange any order within 30 days.",
         category: "jewelery",
@@ -255,7 +255,7 @@ export const kidsClothes = [
   
   {
     id: 13,
-    title: "for your Princess",
+    title: "for your kid Princess",
     price: 9.99,
     description:
       "Classic Created Wedding Engagement Solitaire Diamond Promise Ring for Her. Gifts to spoil your love more for Engagement, Wedding, Anniversary, Valentine's Day...",
