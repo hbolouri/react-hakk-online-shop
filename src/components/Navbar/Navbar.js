@@ -107,7 +107,9 @@ export default function Navbar() {
             <form onSubmit={searchValue} ref={inputRef}>
               <div>
                 <div className="BarSearch">
-                  
+
+
+
                   <input
                     // onChange={searchProduct}
                     onFocus={() => setProducts(data)}
@@ -117,6 +119,7 @@ export default function Navbar() {
                     //name is important for useREf
                     placeholder="Search products"
                   />
+
 
                   <button className="btn-search" type="submit" name="search">
                     <FiSearch size="25px" />
@@ -143,6 +146,9 @@ export default function Navbar() {
               </NavLink>
             )}
           </div>
+
+                
+
           <div>
             <NavLink
               className={(node) =>
