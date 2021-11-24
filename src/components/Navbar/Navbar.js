@@ -34,6 +34,7 @@ export default function Navbar() {
     // console.log(inputRef.current.searchItem.value);
 
     let updatedProducts = data.filter(
+      
       (product) =>
         product.category
           .toLowerCase()
@@ -46,6 +47,7 @@ export default function Navbar() {
           .includes(inputRef.current.searchItem.value.toLowerCase())
     );
     setProducts(updatedProducts);
+    console.log(updatedProducts);
     inputRef.current.searchItem.value = "";
   };
 
@@ -145,6 +147,7 @@ export default function Navbar() {
                 <BiLogIn /> Login
               </NavLink>
             )}
+
           </div>
 
                 

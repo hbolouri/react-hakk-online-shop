@@ -251,6 +251,7 @@ export const kidsClothes = [
       rate: 4.6,
       count: 400,
     },
+
   },
   {
     id: 12,
@@ -264,12 +265,13 @@ export const kidsClothes = [
     rating: {
       rate: 3.9,
       count: 70,
+
     },
   },
 
   {
     id: 13,
-    title: "for your Princess",
+    title: "for your kid Princess",
     price: 9.99,
     description:
       "Classic Created Wedding Engagement Solitaire Diamond Promise Ring for Her. Gifts to spoil your love more for Engagement, Wedding, Anniversary, Valentine's Day...",

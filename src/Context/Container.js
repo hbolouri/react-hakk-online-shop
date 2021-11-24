@@ -1,6 +1,9 @@
 import React, { useEffect, useState } from "react";
 import { MyContext } from "./context";
 import data from "../api/products";
+
+
+
 const Container = (props) => {
   const [user, setUser] = useState(null);
   const [products, setProducts] = useState([]);

@@ -20,9 +20,9 @@ export default function section({title, data}) {
                 <li>Accessories</li>
                 <li>Sale %</li>
             </ul>
-            <div style={{}}>
+            <div style={{padding:"1rem"}}>
                 <h1>Trending Now</h1>
-                <p>Stay up to date</p>
+                
             </div>
             <div className="container">
                 <h4>{title} </h4>
