@@ -19,8 +19,18 @@
     z-index: 3;
 
   }
-  .image-text-k {
-    margin-right: -200px;
+
+ .image-text-k {
+    margin-right: -215px;
+    margin-bottom: 4em;
+    color: rgb(182, 159, 159);
+    background: rgba(202, 198, 198, 0.2);
+    backdrop-filter: blur(10px);
+    background-clip: padding-box;
+    box-shadow: 12px 12px 16px 0 rgb(0 0 0 / 64%), -8px -8px 12px 0 rgb(255 255 255 / 30%);
+    overflow: hidden;
+    padding: 20px;
+    border-radius: 10px;
   }
   
   .image-text-k > * {
