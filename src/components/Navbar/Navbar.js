@@ -14,7 +14,7 @@ import { MyContext } from "../../Context/context";
 export default function Navbar() {
   const inputRef = useRef();
   const [show, setShow] = useState(false);
-  const { user, quantity, products, setProducts, data } = useContext(MyContext);
+  const { user, quantity, setProducts, data } = useContext(MyContext);
 
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
@@ -107,7 +107,9 @@ export default function Navbar() {
             <form onSubmit={searchValue} ref={inputRef}>
               <div>
                 <div className="BarSearch">
-                  <FiSearch size="25px" />
+
+
+
                   <input
                     // onChange={searchProduct}
                     onFocus={() => setProducts(data)}
@@ -117,12 +119,12 @@ export default function Navbar() {
                     //name is important for useREf
                     placeholder="Search products"
                   />
+
+
+                  <button className="btn-search" type="submit" name="search">
+                    <FiSearch size="25px" />
+                  </button>
                 </div>
-                <button>
-                  <span className="btn-search" type="submit" name="search">
-                    Search
-                  </span>
-                </button>
               </div>
             </form>
           </div>
@@ -144,6 +146,9 @@ export default function Navbar() {
               </NavLink>
             )}
           </div>
+
+                
+
           <div>
             <NavLink
               className={(node) =>
