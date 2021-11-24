@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import React, { useContext, useEffect } from "react";
 //FROM FIREBASE
 // Import the functions you need from the SDKs you need
 //it cover all history method
@@ -46,6 +46,7 @@ const Login = () => {
     signInWithPopup(auth, googleProvider)
       .then((userInfo) => {
         setUser(userInfo.user);
+        localStorage.setItem("data-user", JSON.stringify(userInfo.user));
         //login page disappered and we want to change paramather
         //{replace:true} change the previous path
         navigate("/profile");
@@ -55,6 +56,15 @@ const Login = () => {
       })
       .catch((err) => console.log(err.message));
   };
+
+  //to getItem from local storage
+  useEffect(() => {
+    let localUser = localStorage.getItem("data-user");
+    if (localUser) {
+      let originalUser = JSON.parse(localUser);
+      setUser(originalUser);
+    }
+  }, []);
 
   return (
     <div>

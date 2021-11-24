@@ -18,10 +18,10 @@ const Filter = () => {
     setStar(formRef.current.star.value);
     setPrice(formRef.current.price.value);
 
-    console.log(category);
-    console.log(star);
-    console.log(price);
-    console.log(defaultPrice);
+    // console.log(category);
+    // console.log(star);
+    // console.log(price);
+    // console.log(defaultPrice);
 
     if (category !== "all") {
       let tempProducts = data.filter(
@@ -61,7 +61,7 @@ const Filter = () => {
             Star
           </label>
           <select name="star" id="star" className="form-control">
-            <option selected value="1" selected>
+            <option selected value="1">
               1
             </option>
             <option value="2">2</option>
@@ -85,8 +85,8 @@ const Filter = () => {
             id="price"
             min="5"
             max="1000"
-            // defaultValue={defaultPrice}
-            class="slider"
+            defaultValue={defaultPrice}
+            className="slider"
           />
         </div>
 

@@ -37,7 +37,13 @@ const Profile = () => {
       )}
 
       <div>
-        <button className="btn-prima" onClick={logOutGoogle}>
+        <button
+          className="btn-prima"
+          onClick={() => {
+            localStorage.clear();
+            setUser(null);
+          }}
+        >
           Logout
         </button>
         <Link to="/">
