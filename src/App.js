@@ -13,8 +13,6 @@ import "./App.css";
 import Profile from "./pages/Profile/Profile";
 import SingleProduct from "./pages/SingleProduct/SingleProduct";
 import React from 'react';
-import Signup from "../src/components/Signup/Signup"
-import Contact from "./components/Contact/Contact";
 import Footer from './components/Footer/Footer';
 
 function App() {
