@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import React, { useContext, useEffect } from "react";
 //FROM FIREBASE
 // Import the functions you need from the SDKs you need
 //it cover all history method
@@ -51,10 +51,20 @@ const Login = () => {
         navigate("/profile");
         //navigate(-2)go two step back
 
+        //to set the local storage
+        localStorage.setItem("data-user", JSON.stringify(userInfo.user));
         console.log(userInfo);
       })
       .catch((err) => console.log(err.message));
   };
+
+  useEffect(() => {
+    let localUSer = localStorage.getItem("data-user");
+    if (localUSer) {
+      let originalLocalUser = JSON.parse(localUSer);
+      setUser(originalLocalUser);
+    }
+  }, []);
 
   return (
     <div>
